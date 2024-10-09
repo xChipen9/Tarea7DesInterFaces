@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 6</title>
+    <style>
+        form {
+        width: 300px;
+        margin: auto;
+        padding: 50px;
+        border: 1px solid #ccc;
+        border-radius: 40px;
+        }
+        input {
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        }   
+        h2{
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+        }
+        .enviar{
+        padding: 10px;
+        width: 100%;
+        background-color: #e4f838;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;  
+    }
+    .radio-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+        
+      </style>
+</head>
+<body>
+    <form action="procesar.php" method="POST">
+        <h2>Bienvenido al IES Sierra de San Pedro</h2>
+        <h4>A continuación, rellena los datos para empezar con la matriculación.</h4>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+    
+        <label for="turno">Turno:</label>
+        <select id="turno" name="turno" required>
+          <option value="mañana">Mañana</option>
+          <option value="tarde">Tarde</option>
+        </select><br>
+        <br>
+        <br>
+        <br>
+        <label for="materias">Materias:</label>
+        <select id="materias" name="materias" required>
+          <option value="fisica">Física</option>
+          <option value="quimica">Química</option>
+          <option value="biologia">Biología</option>
+          <option value="matematicas">Matemáticas</option>
+        </select><br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" cols="30" rows="4"></textarea><br>
+    
+        <input type="hidden" name="origen" value="Academia">
+        <br>
+        <button class="enviar" type="submit">Enviar</button>
+      </form>
+</body>
+</html>

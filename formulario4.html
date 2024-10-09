@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 4</title>
+    <style>
+        form {
+        width: 300px;
+        margin: auto;
+        padding: 50px;
+        border: 1px solid #ccc;
+        border-radius: 40px;
+        }
+        input {
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        }   
+        h2{
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+        }
+    .radio-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+        .crearCuenta{
+        padding: 10px;
+        width: 100%;
+        background-color: #70f2fb;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+
+      </style>
+</head>
+<body>
+    <form action="procesar.php" method="POST">
+        <h2>Bienvenido a Universidad de Extremadura</h2>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+    
+        <label for="apellidos">Apellidos:</label>
+        <input type="text" id="apellidos" name="apellidos" required><br>
+    
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" pattern="\d{3} \d{2} \d{2} \d{2}" required placeholder="xxx xx xx xx"><br>
+    
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" name="password" minlength="8" required><br>
+    
+        <label for="intereses">Áreas de interés:</label>
+        <br>
+        <select id="intereses" name="intereses[]" multiple>
+          <option value="programacion">Programación</option>
+          <option value="diseno">Diseño</option>
+          <option value="ciencias">Ciencias</option>
+        </select><br>
+        <br>
+        <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento"><br>
+    
+        <input type="checkbox" id="proteccionDatos" name="proteccionDatos" required>
+        <label for="proteccionDatos">Acepto los términos de protección de datos</label><br>
+        <br>
+        <input class="crearCuenta" type="submit" value="Crear cuenta" style="display:block; margin: 0 auto;">
+      </form>
+</body>
+</html>

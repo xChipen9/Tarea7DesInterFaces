@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulario 1</title>
+  <style>
+    form {
+    width: 300px;
+    margin: auto;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 40px;
+    }
+    input {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    }   
+    h2{
+        text-align: center;
+    }
+    h4{
+        text-align: center;
+    }
+    .enviar{
+    padding: 10px;
+    width: 100%;
+    background-color: #fa0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;  
+}
+.radio-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    margin-bottom: 30px;
+    width: 100%;
+}
+  </style>
+</head>
+<body>
+  
+  <form action="procesar.php" method="POST">
+    <h2>Bienvenido a MediaMarkt</h2>
+    <h4>¡Registrate para acceder a ofertas exclusivas!</h4>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" maxlength="20" required><br>
+
+    <label for="apellidos">Apellidos:</label>
+    <input type="text" id="apellidos" name="apellidos" maxlength="20" required><br>
+
+    <label for="item">Sexo:</label>
+    <br>
+    <br>
+        <div class="radio-group">
+            <input class="radio1" type="radio" id="store_pickup" name="delivery" value="store" required>
+            <label class="radio-label" for="store_pickup">Hombre</label>
+        </div>
+    
+        <div class="radio-group">
+            <input class="radio2" type="radio" id="home_delivery" name="delivery" value="home" required>
+            <label class="radio-label" for="home_delivery">Mujer</label>
+        </div>
+
+    <label for="email">Correo electrónico:</label>
+    <input type="email" id="email" name="email" required><br>
+
+    <input type="checkbox" id="novedades" name="novedades" checked>
+    <label class="deseo" for="novedades">Deseo recibir información sobre novedades y ofertas</label><br>
+
+    <input type="checkbox" id="condiciones" name="condiciones" required>
+    <label class="acepto" for="condiciones">Acepto las condiciones generales del sitio sobre protección de datos</label><br>
+    <br>
+    <button class="enviar" type="submit">Enviar</button>
+    </form>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 10</title>
+    <style>
+        form {
+        width: 300px;
+        margin: auto;
+        padding: 50px;
+        border: 1px solid #ccc;
+        border-radius: 40px;
+        }
+        input {
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        }   
+        h2{
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+        }
+        .buscar{
+        padding: 10px;
+        width: 100%;
+        background-color: #f78dc9;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;  
+    }
+    body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Búsqueda Avanzada</h2>
+        <h4>Usa nuestra amplia gama de filtros para encontrar el producto que deseas.</h4>
+        <form action="procesar.php" method="GET">
+            <label for="clave">Palabra Clave:</label>
+            <input type="text" id="clave" name="clave" required>
+
+            <label for="categoria">Categoría:</label>
+            <select id="categoria" name="categoria">
+                <option value="todas">Todas</option>
+                <option value="electronica">Electrónica</option>
+                <option value="ropa">Ropa</option>
+                <option value="hogar">Hogar</option>
+            </select>
+
+            <label for="precio_minimo">Precio Mínimo:</label>
+            <input type="number" id="precio_minimo" name="precio_minimo">
+
+            <label for="precio_maximo">Precio Máximo:</label>
+            <input type="number" id="precio_maximo" name="precio_maximo">
+
+            <label for="ordenar">Ordenar por:</label>
+            <select id="ordenar" name="ordenar">
+                <option value="relevancia">Relevancia</option>
+                <option value="precio">Precio</option>
+            </select>
+
+            <button class="buscar" type="submit">Buscar</button>
+        </form>
+    </div>
+</body>
+</html>

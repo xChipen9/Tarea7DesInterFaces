@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 5</title>
+    <style>
+        form {
+        width: 300px;
+        margin: auto;
+        padding: 50px;
+        border: 1px solid #ccc;
+        border-radius: 40px;
+        }
+        input {
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        }   
+        h2{
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+        }
+        .enviar{
+        padding: 10px;
+        width: 100%;
+        background-color: #8dfb44;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;  
+    }
+    .radio-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+      </style>
+</head>
+<body>
+    <form action="procesar.php" method="POST" enctype="multipart/form-data">
+        <h2>Bienvenido a Cocina Fácil y Rico de Karlos Arguiñano</h2>
+        <h4>Rellena los datos para generar uan receta aleatoria.</h4>
+        <label for="nombreReceta">Nombre de la receta:</label>
+        <input type="text" id="nombreReceta" name="nombreReceta" maxlength="80" required><br>
+    
+        <label for="tipoReceta">Tipo de receta:</label>
+        <br>
+        <select id="tipoReceta" name="tipoReceta" required>
+          <option value="carne">Carne</option>
+          <option value="pescado">Pescado</option>
+          <option value="fruta">Fruta</option>
+        </select><br>
+        <br>
+        <br>
+        <br>
+        <label for="imagenReceta">Imagen de la receta:</label>
+        <input type="file" id="imagenReceta" name="imagenReceta" accept="image/*" required><br>
+    
+        <button class="enviar" type="submit">Enviar</button>
+      </form>
+</body>
+</html>

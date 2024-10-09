@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 7</title>
+    <style>
+        form {
+        width: 300px;
+        margin: auto;
+        padding: 50px;
+        border: 1px solid #ccc;
+        border-radius: 40px;
+        }
+        input {
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        }   
+        h2{
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+        }
+        .enviar{
+        padding: 10px;
+        width: 100%;
+        background-color: #b7b3b3;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;  
+    }
+    body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        
+      </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Adivina el Color</h2>
+        <form action="procesar.php" method="GET">
+            <label for="color">Elige un color:</label>
+            <select id="color" name="color">
+                <option value="azul">Azul</option>
+                <option value="verde">Verde</option>
+                <option value="rojo">Rojo</option>
+                <option value="naranja">Naranja</option>
+                <option value="rosa">Rosa</option>
+                <option value="marron">Marrón</option>
+            </select>
+            <button class="enviar" type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

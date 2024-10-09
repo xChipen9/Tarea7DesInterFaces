@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario 3</title>
+    <style>
+        form {
+        width: 300px;
+        margin: auto;
+        padding: 50px;
+        border: 1px solid #ccc;
+        border-radius: 40px;
+        }
+        input {
+        display: block;
+        margin-bottom: 15px;
+        width: 100%;
+        padding: 10px;
+        text-align: left;
+        }   
+        h2{
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+        }
+    .radio-group {
+        display: flex;
+        justify-content: space-between;
+        align-items: left;
+        margin-bottom: 30px;
+        width: 100%;
+    }
+        .reservar{
+        padding: 10px;
+        width: 100%;
+        background-color: #70f2fb;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        }
+      </style>
+</head>
+<body>
+    <form action="procesar.php" method="POST">
+        <h2>Bienvenido a World Padel Tour</h2>
+        <h4>A continuación, rellena los datos para confirmar la reserva de la pista</h4>
+        <fieldset>
+          <legend>Datos personales</legend>
+          
+          <label for="nombre">Nombre y Apellido:</label>
+          <input type="text" id="nombre" name="nombre" pattern="[A-ZÁÉÍÓÚÑ][a-záéíóúñ]+" required><br>
+    
+          <label>¿Es miembro del club?</label>
+          <input type="checkbox" id="miembro" name="miembro" checked><br>
+    
+          <label for="email">Correo electrónico:</label>
+          <input type="email" id="email" name="email" required><br>
+        </fieldset>
+        <br>
+        <fieldset>
+          <legend>Datos de la reserva</legend>
+            <br>
+          <label for="deporte">Deporte:</label>
+          <select id="deporte" name="deporte" required>
+            <option value="Paddle">Paddle</option>
+            <option value="Squash">Squash</option>
+            <option value="Tenis">Tenis</option>
+          </select><br>
+          <br>
+          <br>
+          <br>
+          <label for="fecha">Fecha y Hora de la reserva:</label>
+          <input type="datetime-local" id="fecha" name="fecha" required><br>
+    
+          <input type="checkbox" id="normas" name="normas" required>
+          <label for="normas">Acepto las normas del club e instalaciones</label><br>
+        </fieldset>
+        <br>
+        <button class="reservar" type="submit" style="display:block; margin: 0 auto;">Reservar</button>
+      </form>
+</body>
+</html>
